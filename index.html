@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌦 Ultimate Weather App</h1>
+            <p>Your complete weather companion</p>
+        </header>
+        <main>
+            <!-- Search Section -->
+            <div id="search">
+                <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off">
+                <button id="searchBtn">Search</button>
+                <button id="locationBtn">📍 My Location</button>
+                <div id="unitToggle">
+                    <button id="celsiusBtn" class="active">°C</button>
+                    <button id="fahrenheitBtn">°F</button>
+                </div>
+            </div>
+
+            <!-- Weather Result Section -->
+            <div id="weatherCard" class="hidden">
+                <div class="card">
+                    <h2 id="cityName"></h2>
+                    <div class="card-content">
+                        <div class="icon-container">
+                            <img id="weatherIcon" src="" alt="">
+                        </div>
+                        <div class="details">
+                            <p id="temperature" class="temperature"></p>
+                            <p id="description" class="description"></p>
+                            <p id="humidity" class="humidity"></p>
+                            <p id="wind" class="wind"></p>
+                            <p id="sunrise" class="sunrise"></p>
+                            <p id="sunset" class="sunset"></p>
+                            <p id="airQuality" class="air-quality"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hourly Forecast Section -->
+            <div id="hourlyForecast" class="hidden">
+                <h3>Hourly Forecast</h3>
+                <div class="forecast-cards" id="hourlyCards"></div>
+            </div>
+
+            <!-- Five-Day Forecast Section -->
+            <div id="dailyForecast" class="hidden">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-cards" id="dailyCards"></div>
+            </div>
+
+            <!-- Saved Cities Section -->
+            <div id="favorites" class="hidden">
+                <h3>Saved Cities</h3>
+                <ul id="savedCities"></ul>
+            </div>
+
+            <!-- Weather Alerts Section -->
+            <div id="alerts" class="hidden">
+                <h3>Weather Alerts</h3>
+                <div id="alertDetails"></div>
+            </div>
+            <!-- Language Selector -->
+<div id="languageSelector">
+    <label for="lang">Language: </label>
+    <select id="lang">
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="ja">日本語</option>
+        <option value="zh_cn">中文 (简体)</option>
+        <option value="ar">العربية</option>
+        <option value="ru">Русский</option>
+    </select>
+</div>
+
+        </main>
+        <footer>
+            <p>&copy; 2024 Ultimate Weather App | Built with ❤️</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
